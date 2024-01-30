@@ -1,0 +1,77 @@
+export{}
+//datatypes
+let isBeginner:boolean=true;
+let total:number=200;
+let name : string="priya";
+let message= `Welcome back ${name} and I am a beginner`;
+console.log(message);
+//Array
+let x: number[] =[1,2,3];
+let y:Array<number>=[1,2,3,4];
+console.log(x[0]);
+//enum
+enum Color{Red=5,Blue=20};
+let c: Color= Color.Red;
+console.log(c);
+//any
+let randomvalue:any=10;
+randomvalue=true;
+randomvalue="priya";
+console.log(randomvalue);
+
+// let randomvalue1:unknown=10;
+// function hasName(obj:any): obj is{name:string}{
+//  return !!obj && "name" in obj
+// }
+// if(hasName(randomvalue1)){
+//     console.log(randomvalue1.name);
+// }
+// randomvalue1=true;
+// randomvalue1="priya";
+// (randomvalue1 as string).toLowerCase();
+
+let a;
+a=10;
+a=true;
+let b=20;
+let multitype : number | boolean | string;
+multitype=20;
+multitype=true;
+multitype="priya";
+
+//functions
+function add(num1 : number ,num2:number):number{
+    return num1+num2;
+}
+
+let numbertoal:number =add(3,6);
+
+//to make paramerter as optional
+
+//function functionname(parameter1: datatype,parameter2:datatype):number{
+
+//to make it optional then put ?
+//function add(num1 : number ,num2 ?:number):number{
+
+//default 
+//function add(num1 : number ,num2 :number=90):number{
+
+function fullName(person:{firstName:string,lastName:string}){
+    console.log(`${person.firstName} ${person.lastName}`);
+
+}
+let p={firstName:'priya',lastName:
+'priyahi'};
+
+fullName(p);
+
+//interface
+interface Person{
+    firstName:string;
+    lastName:string;
+}
+
+function Name(person:Person){
+    console.log(person.firstName+" "+person.lastName);
+}
+Name(p);
